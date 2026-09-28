@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Stitch">
+  <defs>
+    <linearGradient id="stitchFur" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#63b3ed" />
+      <stop offset="100%" stop-color="#2b6cb0" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#fff8ec" />
+  <ellipse cx="16" cy="23" rx="9" ry="13" transform="rotate(-24 16 23)" fill="url(#stitchFur)" />
+  <ellipse cx="48" cy="23" rx="9" ry="13" transform="rotate(24 48 23)" fill="url(#stitchFur)" />
+  <ellipse cx="32" cy="34" rx="21" ry="19" fill="url(#stitchFur)" />
+  <ellipse cx="32" cy="38" rx="15" ry="12" fill="#c9e8fa" opacity="0.9" />
+  <ellipse cx="24" cy="32" rx="4.5" ry="5" fill="#14243f" />
+  <ellipse cx="40" cy="32" rx="4.5" ry="5" fill="#14243f" />
+  <circle cx="25.6" cy="30" r="1.7" fill="#ffffff" />
+  <circle cx="41.6" cy="30" r="1.7" fill="#ffffff" />
+  <path d="M28.5 41 C29.5 46.5 34.5 46.5 35.5 41 Z" fill="#132c4e" />
+  <ellipse cx="32" cy="47" rx="3" ry="1.8" fill="#ed64a6" opacity="0.95" />
+</svg>

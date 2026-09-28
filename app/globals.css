@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+/* ==================================================================
+   Stitch (Lilo & Stitch) themed design tokens
+   Soft Hawaiian tropical palette: Stitch blue, lavender, warm pink,
+   sandy cream accents.
+   ================================================================== */
+@theme {
+  /* Stitch blues */
+  --color-stitch-50: #ebf8ff;
+  --color-stitch-100: #c9e8fa;
+  --color-stitch-200: #a8d8f0;
+  --color-stitch-300: #7bc0e8;
+  --color-stitch-400: #63b3ed;
+  --color-stitch-500: #4299e1;
+  --color-stitch-600: #3182ce;
+  --color-stitch-700: #2b6cb0;
+  --color-stitch-800: #1f4e82;
+  --color-stitch-900: #1a365d;
+
+  /* Soft lavender */
+  --color-lavender-100: #ede9fe;
+  --color-lavender-200: #ddd6fe;
+  --color-lavender-300: #c4b5fd;
+  --color-lavender-400: #b794f4;
+  --color-lavender-500: #9f7aea;
+  --color-lavender-600: #805ad5;
+
+  /* Warm hibiscus pinks */
+  --color-hibiscus-100: #fde8f1;
+  --color-hibiscus-200: #fbb6ce;
+  --color-hibiscus-300: #f687b3;
+  --color-hibiscus-400: #ed64a6;
+  --color-hibiscus-500: #d53f8c;
+  --color-hibiscus-600: #b83280;
+
+  /* Sandy cream accents */
+  --color-cream-50: #fffdf8;
+  --color-cream-100: #fff8ec;
+  --color-cream-200: #fdefd8;
+  --color-cream-300: #f6dfbe;
+  --color-sand-400: #e9c79a;
+
+  /* Palm / tropical green */
+  --color-palm-500: #38a169;
+
+  /* Typography */
+  --font-display: var(--font-fredoka), ui-rounded, "Segoe UI", system-ui, sans-serif;
+  --font-body: var(--font-nunito), ui-rounded, "Segoe UI", system-ui, sans-serif;
+
+  /* Playful animations */
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 11s ease-in-out infinite;
+  --animate-bob: bob 3.4s ease-in-out infinite;
+  --animate-wiggle: wiggle 2.6s ease-in-out infinite;
+  --animate-twinkle: twinkle 2.8s ease-in-out infinite;
+  --animate-blob: blob 16s ease-in-out infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+
+  @keyframes bob {
+    0%,
+    100% {
+      transform: translateY(0) rotate(-1deg);
+    }
+    50% {
+      transform: translateY(-8px) rotate(1deg);
+    }
+  }
+
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-6deg);
+    }
+    50% {
+      transform: rotate(6deg);
+    }
+  }
+
+  @keyframes twinkle {
+    0%,
+    100% {
+      opacity: 0.25;
+      transform: scale(0.85);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.15);
+    }
+  }
+
+  @keyframes blob {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(24px, -18px) scale(1.08);
+    }
+    66% {
+      transform: translate(-18px, 16px) scale(0.94);
+    }
+  }
+}
+
+/* 3D flip-card helpers (used by the Love Coupons) */
+@utility flip-scene {
+  perspective: 1200px;
+}
+
+@utility flip-inner {
+  transform-style: preserve-3d;
+}
+
+@utility flip-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+@utility flip-back {
+  transform: rotateY(180deg);
+}
+
+/* Thin, playful scrollbar */
+@utility pretty-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-stitch-300) transparent;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-stitch-900);
+    background-color: var(--color-cream-100);
+    background-image:
+      radial-gradient(1100px 620px at 8% -8%, rgb(168 216 240 / 0.6), transparent 70%),
+      radial-gradient(900px 520px at 100% 2%, rgb(253 232 241 / 0.85), transparent 65%),
+      radial-gradient(1000px 640px at 50% 108%, rgb(237 233 254 / 0.85), transparent 70%);
+    background-attachment: fixed;
+    min-height: 100dvh;
+    /* Playful transforms (a growing button, a runaway button) must never
+       create a horizontal scrollbar on phones. */
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background-color: var(--color-hibiscus-200);
+    color: var(--color-stitch-900);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-hibiscus-400);
+    outline-offset: 3px;
+    border-radius: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
