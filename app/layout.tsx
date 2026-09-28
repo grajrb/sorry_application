@@ -20,13 +20,13 @@ const nunito = Nunito({
 export const metadata: Metadata = {
   // Used to build absolute URLs for link previews (e.g. the WhatsApp preview).
   metadataBase: new URL("https://sorry-stitch.vercel.app"),
-  title: "Ohana means family 💙 and I'm really sorry",
+  title: `${siteConfig.herName}, ohana means family 💙 and I'm really sorry`,
   description:
     "A tiny Stitch-themed apology page: a heartfelt note, love coupons, an evasive forgiveness game and a build-your-own makeup date.",
   keywords: ["sorry", "apology", "stitch", "lilo and stitch", "love coupons", "makeup date"],
   authors: [{ name: siteConfig.myName }],
   openGraph: {
-    title: "Ohana means family 💙 and I'm really sorry",
+    title: `A very sorry Stitch made this for ${siteConfig.herName} 💙`,
     description:
       "I built you a whole page instead of saying sorry like a normal person. Come click the buttons 🥺",
     type: "website",
@@ -47,7 +47,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${fredoka.variable} ${nunito.variable}`}>
-      <body className="font-body min-h-dvh antialiased">
+      {/* `suppressHydrationWarning` keeps browser extensions (Grammarly and
+          friends inject `data-gr-*` attributes into <body>) from throwing a
+          hydration error — the page itself renders identically. */}
+      <body className="font-body min-h-dvh antialiased" suppressHydrationWarning>
         <TopNav />
         {children}
         <Footer />

@@ -18,9 +18,9 @@ export const PLACEHOLDER_WHATSAPP = "911234567890";
 
 export const siteConfig = {
   /** Her name (or the nickname only you use 🙂) */
-  herName: "My Love",
+  herName: "Kushi",
   /** Your name, shown on the "Send to ..." button */
-  myName: "Your Stitch",
+  myName: "Gaurav",
   /** WhatsApp number: country code + number, digits only */
   whatsappNumber: PLACEHOLDER_WHATSAPP,
 } as const;
@@ -40,7 +40,7 @@ export const apology = {
     { emoji: "🩹", title: "I'll do better", text: "Same mistake twice? It won't happen again." },
     { emoji: "🤝", title: "Us over ego", text: "I'd rather be happy with you than right without you." },
   ],
-  signature: "— your extremely sorry Stitch 💙",
+  signature: `— ${siteConfig.myName}, your extremely sorry Stitch 💙`,
 } as const;
 
 /** True once a real number has been filled in above. */

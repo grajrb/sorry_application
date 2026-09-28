@@ -36,7 +36,9 @@ export default function Footer() {
           </span>
         </div>
 
-        <p className="mt-7 text-xs text-stitch-800/50">
+        {/* The year comes from the build machine, so the client may disagree on
+            New Year's Eve — keep React from crying about it. */}
+        <p className="mt-7 text-xs text-stitch-800/50" suppressHydrationWarning>
           © {year} {siteConfig.myName} · built with Next.js, Tailwind &amp; a lot of snacks 🌺
         </p>
       </div>
