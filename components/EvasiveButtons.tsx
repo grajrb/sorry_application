@@ -67,7 +67,7 @@ const TAUNTS = [
   "Whoa — missed me! 🏃‍♂️💨",
   "It's shy. The pink one likes you though 🥺",
   "That button is taking a nap. Try the other one 😴",
-  "You can't catch a Stitch 💙",
+  "You can't catch me — I'm a work in progress 💙",
   "Wrong button! The pink one gives you coupons 🎟️",
   "Even the button is on my side now 🙈",
   "Okay… it ran out of hiding spots, but it's still broken 💔",
@@ -658,12 +658,12 @@ export default function EvasiveButtons() {
               <StitchMascot
                 mood="love"
                 className="mx-auto w-40 sm:w-48"
-                label="Stitch hugging a big pink heart"
+                label="A little sparkly apology-bot hugging a big pink heart"
               />
 
               <p className="mt-1 inline-flex items-center gap-2 rounded-full bg-stitch-100 px-4 py-1.5 text-xs font-bold tracking-widest text-stitch-700 uppercase">
                 <PartyPopper className="size-3.5" aria-hidden="true" />
-                ohana achieved
+                forgiveness shipped
               </p>
 
               <h2

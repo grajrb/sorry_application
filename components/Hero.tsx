@@ -8,10 +8,10 @@ import Typewriter from "@/components/Typewriter";
 import { apology, siteConfig } from "@/lib/config";
 
 const FLOATERS = [
-  { emoji: "🌺", className: "left-[3%] top-[16%] text-4xl animate-float", delay: "0s" },
-  { emoji: "🐚", className: "right-[6%] top-[24%] text-3xl animate-float-slow", delay: "1.1s" },
-  { emoji: "🌴", className: "left-[6%] bottom-[12%] text-5xl animate-float-slow", delay: "0.6s" },
-  { emoji: "☀️", className: "right-[10%] bottom-[8%] text-4xl animate-float", delay: "1.7s" },
+  { emoji: "✨", className: "left-[3%] top-[16%] text-4xl animate-float", delay: "0s" },
+  { emoji: "🎨", className: "right-[6%] top-[24%] text-3xl animate-float-slow", delay: "1.1s" },
+  { emoji: "🪄", className: "left-[6%] bottom-[12%] text-5xl animate-float-slow", delay: "0.6s" },
+  { emoji: "💭", className: "right-[10%] bottom-[8%] text-4xl animate-float", delay: "1.7s" },
   { emoji: "💙", className: "left-[46%] top-[5%] text-3xl animate-float", delay: "0.9s" },
 ];
 
@@ -21,7 +21,7 @@ export default function Hero() {
 
   return (
     <section className="relative isolate px-4 pt-28 pb-6 sm:pt-32">
-      {/* soft tropical background blobs + floating stickers */}
+      {/* soft surface-tint blobs + floating stickers */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute -left-24 top-8 size-72 animate-blob rounded-full bg-stitch-200/60 blur-3xl" />
         <div
@@ -72,8 +72,9 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="mx-auto mt-5 max-w-xl text-lg text-stitch-800/85 lg:mx-0"
           >
-            Hi {siteConfig.herName} 🥺 I didn&apos;t know how to say this properly, so I built you a
-            whole page instead. There are hearts, coupons and one very slippery button.
+            Hi {siteConfig.herName} 🥺 I didn&apos;t know how to say this properly, so I opened
+            Google Stitch and designed you a whole page instead. There are hearts, coupons and one
+            very slippery button.
           </motion.p>
 
           <motion.div

@@ -43,6 +43,19 @@ Everything you need to change lives in **`lib/config.ts`**:
 > "copy the message" button instead of opening a broken WhatsApp chat — so the
 > page never breaks in front of her.
 
+### Environment variables (optional, set them in Vercel)
+
+Both override the file so you can change them **after deploying** without a code
+edit (Vercel → Project → Settings → Environment Variables → Production):
+
+| Variable                      | Example             | Effect                                            |
+| ----------------------------- | ------------------- | ------------------------------------------------- |
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | `919876543210`      | Wins over `whatsappNumber` in `lib/config.ts`      |
+| `NEXT_PUBLIC_SITE_URL`        | `https://sorry.app` | Link-preview URL; on Vercel it is detected for you |
+
+You do **not** need either one for a normal Vercel deploy — the production
+domain is picked up automatically at build time.
+
 Other quick edits:
 
 - **Coupons** → `COUPONS` in `components/CouponGrid.tsx`
@@ -99,8 +112,12 @@ same `npm run build` works for any static host (just publish the `out/` folder).
 
 - Confetti and the WhatsApp hand-off are client-side only; the site itself is
   prerendered to HTML at build time.
-- The WhatsApp link intentionally uses `wa.me` (no WhatsApp API, no keys).
+- The WhatsApp link intentionally uses `wa.me` (no WhatsApp API, no keys). The
+  number currently in `lib/config.ts` is a real one, so the Date Builder opens
+  the chat with the date message pre-filled. Put `PLACEHOLDER_WHATSAPP` back (or
+  break the number on purpose) and the app quietly falls back to a "copy the
+  message" button instead of opening a dead chat.
 - Redeemed coupons are stored per-browser in `localStorage` — clearing site
   data resets them.
-- `metadataBase` in `app/layout.tsx` points at a placeholder domain; change it
-  to your deployed URL so link previews (WhatsApp/iMessage) show correctly.
+- `metadataBase` in `app/layout.tsx` resolves itself: `NEXT_PUBLIC_SITE_URL` if
+  you set it, otherwise the Vercel production domain at build time.

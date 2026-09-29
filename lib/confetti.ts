@@ -15,14 +15,14 @@ type ConfettiShape = ReturnType<ConfettiFn["shapeFromText"]>;
 type ConfettiOptions = Parameters<ConfettiFn>[0];
 
 const PALETTE = [
-  "#4299E1",
-  "#2B6CB0",
-  "#9F7AEA",
-  "#B794F4",
-  "#ED64A6",
-  "#FBB6CE",
-  "#E9C79A",
-  "#38A169",
+  "#7C5FE6",
+  "#6746CC",
+  "#B9A8FB",
+  "#8A6CE6",
+  "#EF78A5",
+  "#FBD2E0",
+  "#D5C8E8",
+  "#3F9B6F",
 ];
 
 let loader: Promise<ConfettiFn | null> | null = null;
@@ -49,7 +49,7 @@ function getHeartShapes(confetti: ConfettiFn): ConfettiShape[] | undefined {
       heartShapes = [
         confetti.shapeFromText({ text: "💙", scalar: 2 }),
         confetti.shapeFromText({ text: "💖", scalar: 2 }),
-        confetti.shapeFromText({ text: "🌺", scalar: 1.8 }),
+        confetti.shapeFromText({ text: "✨", scalar: 1.8 }),
         confetti.shapeFromText({ text: "⭐", scalar: 1.6 }),
       ];
     } catch {

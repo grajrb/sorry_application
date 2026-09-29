@@ -1,52 +1,53 @@
 @import "tailwindcss";
 
 /* ==================================================================
-   Stitch (Lilo & Stitch) themed design tokens
-   Soft Hawaiian tropical palette: Stitch blue, lavender, warm pink,
-   sandy cream accents.
+   Google Stitch themed design tokens
+   Material 3 flavoured palette: violet primary, lilac secondary, coral
+   tertiary, neutral "surface" tints. The token NAMES are unchanged, so
+   every component on the page retints from this one block.
    ================================================================== */
 @theme {
-  /* Stitch blues */
-  --color-stitch-50: #ebf8ff;
-  --color-stitch-100: #c9e8fa;
-  --color-stitch-200: #a8d8f0;
-  --color-stitch-300: #7bc0e8;
-  --color-stitch-400: #63b3ed;
-  --color-stitch-500: #4299e1;
-  --color-stitch-600: #3182ce;
-  --color-stitch-700: #2b6cb0;
-  --color-stitch-800: #1f4e82;
-  --color-stitch-900: #1a365d;
+  /* Stitch violet — Material "primary" */
+  --color-stitch-50: #f5f3ff;
+  --color-stitch-100: #e9e4ff;
+  --color-stitch-200: #d6ccff;
+  --color-stitch-300: #b9a8fb;
+  --color-stitch-400: #9a83f3;
+  --color-stitch-500: #7c5fe6;
+  --color-stitch-600: #6746cc;
+  --color-stitch-700: #5537a8;
+  --color-stitch-800: #432c82;
+  --color-stitch-900: #2f1f5c;
 
-  /* Soft lavender */
-  --color-lavender-100: #ede9fe;
-  --color-lavender-200: #ddd6fe;
-  --color-lavender-300: #c4b5fd;
-  --color-lavender-400: #b794f4;
-  --color-lavender-500: #9f7aea;
-  --color-lavender-600: #805ad5;
+  /* Lilac — Material "secondary" */
+  --color-lavender-100: #ece9fe;
+  --color-lavender-200: #dbd4fc;
+  --color-lavender-300: #c2b5f8;
+  --color-lavender-400: #a58ff0;
+  --color-lavender-500: #8a6ce6;
+  --color-lavender-600: #6f50c4;
 
-  /* Warm hibiscus pinks */
-  --color-hibiscus-100: #fde8f1;
-  --color-hibiscus-200: #fbb6ce;
-  --color-hibiscus-300: #f687b3;
-  --color-hibiscus-400: #ed64a6;
-  --color-hibiscus-500: #d53f8c;
-  --color-hibiscus-600: #b83280;
+  /* Coral pink — Material "tertiary" */
+  --color-hibiscus-100: #feeaf1;
+  --color-hibiscus-200: #fbd2e0;
+  --color-hibiscus-300: #f7a8c6;
+  --color-hibiscus-400: #ef78a5;
+  --color-hibiscus-500: #df4a86;
+  --color-hibiscus-600: #bb2c6a;
 
-  /* Sandy cream accents */
-  --color-cream-50: #fffdf8;
-  --color-cream-100: #fff8ec;
-  --color-cream-200: #fdefd8;
-  --color-cream-300: #f6dfbe;
-  --color-sand-400: #e9c79a;
+  /* Neutral surfaces */
+  --color-cream-50: #fefbff;
+  --color-cream-100: #fbf8ff;
+  --color-cream-200: #f3edfa;
+  --color-cream-300: #e7ddf2;
+  --color-sand-400: #d5c8e8;
 
-  /* Palm / tropical green */
-  --color-palm-500: #38a169;
+  /* Success green */
+  --color-palm-500: #3f9b6f;
 
-  /* Typography */
-  --font-display: var(--font-fredoka), ui-rounded, "Segoe UI", system-ui, sans-serif;
-  --font-body: var(--font-nunito), ui-rounded, "Segoe UI", system-ui, sans-serif;
+  /* Typography — Outfit reads close to Google Sans, Roboto is Material's body face */
+  --font-display: var(--font-outfit), "Google Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
 
   /* Playful animations */
   --animate-float: float 7s ease-in-out infinite;
@@ -146,10 +147,11 @@
     font-family: var(--font-body);
     color: var(--color-stitch-900);
     background-color: var(--color-cream-100);
+    /* Soft Material "surface tint" glows rather than flat grey. */
     background-image:
-      radial-gradient(1100px 620px at 8% -8%, rgb(168 216 240 / 0.6), transparent 70%),
-      radial-gradient(900px 520px at 100% 2%, rgb(253 232 241 / 0.85), transparent 65%),
-      radial-gradient(1000px 640px at 50% 108%, rgb(237 233 254 / 0.85), transparent 70%);
+      radial-gradient(1100px 620px at 8% -8%, rgb(214 204 255 / 0.75), transparent 70%),
+      radial-gradient(900px 520px at 100% 2%, rgb(251 210 224 / 0.8), transparent 65%),
+      radial-gradient(1000px 640px at 50% 108%, rgb(236 233 254 / 0.9), transparent 70%);
     background-attachment: fixed;
     min-height: 100dvh;
     /* Playful transforms (a growing button, a runaway button) must never

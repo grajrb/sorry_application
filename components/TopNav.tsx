@@ -31,9 +31,9 @@ export default function TopNav() {
       <div className="flex max-w-full items-center gap-1 rounded-full border border-white/70 bg-white/80 p-1.5 shadow-[0_10px_30px_-12px_rgba(43,108,176,0.55)] backdrop-blur-md">
         <span
           className="hidden items-center gap-1.5 rounded-full bg-gradient-to-r from-stitch-500 to-lavender-500 px-3 py-1.5 text-sm font-semibold text-white sm:flex"
-          title="Ohana means family"
+          title="Designed with Google Stitch"
         >
-          <span aria-hidden="true">💙</span> Ohana
+          <span aria-hidden="true">✨</span> Stitch
         </span>
 
         <ul className="flex items-center gap-0.5 overflow-x-auto pretty-scroll">

@@ -18,8 +18,8 @@ export default function Footer() {
         </p>
 
         <p className="mx-auto mt-3 max-w-xl text-stitch-800/80">
-          If you&apos;re still a little mad, that&apos;s okay — I&apos;ll keep being the fluffiest,
-          most annoying, most apologetic Stitch until you smile. You are my ohana,{" "}
+          If you&apos;re still a little mad, that&apos;s okay — I&apos;ll keep redesigning,
+          rewriting and re-apologising until you smile. You are my favourite person,{" "}
           {siteConfig.herName}. Always.
         </p>
 
@@ -28,7 +28,7 @@ export default function Footer() {
         <div className="mt-7 flex flex-wrap items-center justify-center gap-3 text-sm text-stitch-800/70">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-cream-200 px-3 py-1.5">
             <Heart className="size-4 text-hibiscus-400" aria-hidden="true" />
-            made with love, not with AI judgement
+            designed with Google Stitch, hand-finished with love
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full bg-cream-200 px-3 py-1.5">
             <Mail className="size-4 text-stitch-600" aria-hidden="true" />
@@ -39,7 +39,8 @@ export default function Footer() {
         {/* The year comes from the build machine, so the client may disagree on
             New Year's Eve — keep React from crying about it. */}
         <p className="mt-7 text-xs text-stitch-800/50" suppressHydrationWarning>
-          © {year} {siteConfig.myName} · built with Next.js, Tailwind &amp; a lot of snacks 🌺
+          © {year} {siteConfig.myName} · designed with Google Stitch, built with Next.js &amp; a lot
+          of snacks ✨
         </p>
       </div>
     </footer>

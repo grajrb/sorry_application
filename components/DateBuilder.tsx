@@ -46,7 +46,7 @@ const STEPS: DateStep[] = [
       { id: "arcade", label: "Arcade & air hockey", emoji: "🕹️", blurb: "I'll lose on purpose" },
       { id: "movie", label: "Movie night", emoji: "🍿", blurb: "you pick, zero commentary" },
       { id: "beach", label: "Beach walk at sunset", emoji: "🏖️", blurb: "toes in the sand" },
-      { id: "aquarium", label: "Aquarium", emoji: "🐠", blurb: "we'll find a Stitch-fish" },
+      { id: "aquarium", label: "Aquarium", emoji: "🐠", blurb: "we'll find the fish" },
       { id: "bowling", label: "Bowling", emoji: "🎳", blurb: "bumpers allowed for me" },
       { id: "walk", label: "City walk + photos", emoji: "📸", blurb: "you're the model" },
     ],
@@ -171,7 +171,7 @@ export default function DateBuilder() {
           pick three things, I&apos;ll handle the rest
         </span>
         <h2 className="font-display mt-4 text-3xl font-semibold text-stitch-900 sm:text-4xl">
-          Build our makeup date 🌺
+          Build our makeup date ✨
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-stitch-800/80">
           Food, then something fun, then dessert. When you&apos;re done, the button below sends it
